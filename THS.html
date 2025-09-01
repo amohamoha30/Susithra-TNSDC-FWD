@@ -1,0 +1,200 @@
+                                    
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: rgb(181, 88, 138);
+            color: rgb(24, 1, 27);
+            padding: 10px 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links li a {
+            color: 
+            rgb(174, 110, 214);
+            text-decoration: none;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .hero {
+            background: linear-gradient(to right, rgb(212, 143, 220), rgb(77, 1, 74));
+            color: rgb(224, 128, 218);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .hero h1 span {
+            color: rgb(247, 4, 190);
+        }
+        .btn {
+            background: rgb(194, 227, 117);
+            color: rgb(38, 2, 56);
+            padding: 10px 20px;
+            margin-top: 20px;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .about-content img {
+            max-width: 200px;
+            border-radius: 100%;
+            margin: 20px;
+        }
+        .project {
+            padding: 40px 20px;
+            background: #fe4bfe;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background-color: rgb(249, 176, 215);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: #fa90ee;
+            color: rgb(83, 42, 68);
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e366a5;
+        }
+        footer {
+            background: #dc51e6;
+            color: rgb(32, 2, 27);
+            padding: 10px;
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: hsl(0, 98%, 51%);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#Home">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                <li><a href="#Project">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="Home" class="hero">
+        <h1>Hi Hello, I'm <span>SUSITHRA.V</span></h1>
+        <p>A Student Learning Web Development</p>
+        <a href="#Project" class="btn">View My Work</a>
+    </section>
+
+    <section id="About" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src=" c:\flower.jpg\rose.jpg.jpg" alt="profile photo">
+            <p>Hi,I'm SUSITHRA,a passionate student exploring the world of computer application & Web Development
+                This is my portfolio where I showcase my skills,projects and Achivements
+            </p>
+        </div>
+    </section>
+
+    <section id="Project" class="project">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project-1</h3>
+                <p>A Simple Website</p>
+            </div>
+            <div class="project-card">
+                <h3>Project-2</h3>
+                <p>JavaScript Quiz App</p>
+            </div>
+            <div class="project-card">
+                <h3>Project-3</h3>
+                <p>Personal Blog with CMS</p>
+  </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SUSITHRA / All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+    
